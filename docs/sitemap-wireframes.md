@@ -9,7 +9,7 @@
 All pages link from the main navigation bar.  
 *Note:* The About page has the same layout as others and was not wireframed separately.
 
----
+
 
 ## Wireframes
 Three wireframes were created:
