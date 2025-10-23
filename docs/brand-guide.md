@@ -24,7 +24,7 @@ Contrast checked (WebAim)
 - Code:  JetBrains Mono
   
 
-# Logo 
+## Logo 
 Simple Logo "HTMLemon" with a small lemon icon (Evidence folder)
 
 ## Accessibility
