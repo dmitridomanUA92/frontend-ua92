@@ -6,7 +6,7 @@
 :root {
     --bg: #ffffff;
     --text-color: #1e1e1e;
-    --accent-green:#8cc63f
+    --accent-green:#8cc63f;
     --accent-yellow: #e6c300;
     --border: #e5e5e5;
     --font-main: "Inter", sans-serif;
@@ -18,7 +18,7 @@ html, body {
     line-height: 1.6;
 }
 h1 { font-size: 2rem; margin-bottom: 0.5rem; } 
-h2 { font-size:1.5rem; margin-bottom:1rem 0; }
+h2 { font-size:1.5rem; margin: 1rem 0; }
 p { margin: 0.75rem 0; }
 
 header, nav, main, footer {
@@ -29,4 +29,25 @@ header, nav, main, footer {
 header, footer {
     border-top: 1px solid var(--border);
     border-bottom: 1px solid var(--border);
+}
+nav {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+    padding-left: 0;
+
+    margin-bottom: 1rem;
+}
+
+nav ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+nav a {
+    text-decoration: none;
 }
