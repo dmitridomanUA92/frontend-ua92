@@ -1,4 +1,13 @@
-/*
-main.css
-Base CSS placeholder for the project
-*/
+* {
+    margin: 0;
+    padding:0;  
+    box-sizing: border-box;
+}
+:root {
+    --bg: #ffffff;
+    --text-color: #1e1e1e;
+    --accent-green:#8cc63f
+    --accent-yellow: #e6c300;
+    --border: #e5e5e5;
+    --font-main: "Inter", sans-serif;
+}  
