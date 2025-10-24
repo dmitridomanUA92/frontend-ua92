@@ -7,6 +7,7 @@
     --bg: #ffffff;
     --text-color: #1e1e1e;
     --accent-green:#8cc63f;
+    --accent-green-contrast: #2e7d32;
     --accent-yellow: #e6c300;
     --border: #e5e5e5;
     --font-main: "Inter", sans-serif;
@@ -22,7 +23,6 @@ h2 { font-size:1.5rem; margin: 1rem 0; }
 
 p { margin: 0.75rem 0; }
 
-/* Improve overall text readability and spacing */
 body {
     font-size: 1rem;
     line-height: 1.7;
@@ -68,7 +68,6 @@ nav ul {
     gap: 1rem;
 }
 
-/* Fix visited link style and improve hover contrast */
 nav a:link,
 nav a:visited {
     color: var(--text-color);
@@ -77,7 +76,7 @@ nav a:visited {
 
 nav a:hover,
 nav a:focus {
-    color: var(--accent-green);
+    color: var(--accent-green-contrast);
     text-decoration: underline;
 }
 .skip-link {
@@ -104,7 +103,6 @@ a:focus-visible {
     }
 } 
 
-/* Hero and section headings */
 .hero {
   text-align: center;
   padding: 2.5rem 0;
@@ -116,7 +114,6 @@ a:focus-visible {
   margin: 1.5rem 0;
 }
 
-/* Layout polish for cards and containers */
 main {
   max-width: 960px;
   margin: 0 auto;
@@ -128,6 +125,10 @@ main {
   gap: 1rem;
   margin-top: 1.5rem;
   grid-template-columns: repeat(3, 1fr);
+}
+
+.cards > h2 {
+  grid-column: 1 / -1;
 }
 
 .card {
@@ -152,7 +153,6 @@ footer {
   }
 }
 
-/* Footer quick-links layout */
 .footer-links {
   display: flex;
   justify-content: center;
@@ -169,6 +169,64 @@ footer {
 
 .footer-links a:hover,
 .footer-links a:focus {
-  color: var(--accent-green);
+  color: var(--accent-green-contrast);
   text-decoration: underline;
+}
+
+.contact form {
+  display: grid;
+  gap: 0.75rem;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.contact label {
+  display: block;
+  font-weight: 500;
+}
+
+.contact input,
+.contact textarea {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--border);
+  font: inherit;
+  border-radius: 4px;
+}
+
+.contact button {
+  padding: 0.6rem 1rem;
+  border: 1px solid var(--border);
+  background: var(--accent-yellow);
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.contact button:hover,
+.contact button:focus {
+  filter: brightness(0.96);
+}
+
+@media (max-width: 600px) {
+  header, footer, main {
+    padding: 0.75rem;
+  }
+
+  .hero {
+    padding: 1.5rem 1rem;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .card {
+    padding: 0.75rem;
+  }
+
+  .footer-links {
+    flex-wrap: wrap;
+    font-size: 0.9rem;
+  }
 }
