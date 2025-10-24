@@ -20,23 +20,40 @@
     <ul class="nav-links">
       <li><a href="index.html" aria-current="page">Home</a></li>
       <li><a href="about.html">About</a></li>
-      <li><a href="posts.html">posts</a></li>
+      <li><a href="posts.html">Posts</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
 </header>
 
 <main id="main-content">
-  <h2>Welcome to HTMLemon</h2>
-  <p>HTMLemon is a small tech blog exploring common front-end development faults and their fixes.
-    The goal of this blog is to help junior developers identify and resolve common issues they may encounter
-    while working on front-end projects. Whether you're a beginner looking to learn more about HTML, CSS, and JavaScript,
-    or an experienced developer looking for tips and tricks, HTMLemon has something for you. Stay tuned for regular updates and new posts!</p>
+    <section class="hero">
+      <h2>Hero Section</h2>
+      <p>Quick tips and fixes for common front‑end issues.</p>
+    </section>
 
-    <p>
-      Use the navigation links above to explore the blog and learn more about front-end development or better yet subscribe to our newsletter to get the latest posts delivered straight to your inbox!
-</p>
-    </main>
+    <section class="cards">
+      <article class="card">
+        <h3>Broken layout?</h3>
+        <p>Fix spacing with margin and padding. Check the box model.</p>
+      </article>
+      <article class="card">
+        <h3>CSS not loading?</h3>
+        <p>Check the file path and do a hard refresh.</p>
+      </article>
+      <article class="card">
+        <h3>JS not running?</h3>
+        <p>Open the console. Look for errors. Add <code>defer</code>.</p>
+      </article>
+    </section>
+
+    <nav class="footer-links" aria-label="Quick links">
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="posts.html">Posts</a>
+      <a href="contact.html">Contact</a>
+      <a href="about.html">About</a>
+    </nav>
+  </main>
 
 <footer>
 
