@@ -104,6 +104,18 @@ a:focus-visible {
     }
 } 
 
+/* Hero and section headings */
+.hero {
+  text-align: center;
+  padding: 2.5rem 0;
+  border: 1px solid var(--border);
+  margin-bottom: 1rem;
+}
+.section-title {
+  text-align: center;
+  margin: 1.5rem 0;
+}
+
 /* Layout polish for cards and containers */
 main {
   max-width: 960px;
