@@ -55,3 +55,19 @@ nav a:hover, nav a:focus {
     color: var(--accent-yellow);
     text-decoration: underline;
 }
+.skip-link {
+    position: absolute;
+    left: -9999px;
+}
+.skip-link:focus {
+    left: 1rem;
+    top: 1rem;
+    background: #000;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    z-index: 1000;
+}
+a:focus-visible {
+    outline: 2px solid  #000;
+    outline-offset: 2px;
+}
