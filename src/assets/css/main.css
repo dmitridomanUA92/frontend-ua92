@@ -104,11 +104,18 @@ a:focus-visible {
 } 
 
 .hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-align: center;
   padding: 2.5rem 0;
   border: 1px solid var(--border);
-  margin-bottom: 1rem;
+  margin-bottom: 2.5rem;
+  gap: 0.5rem;
 }
+.hero h2 { margin: 0 0 0.5rem; }
+.hero p  { margin: 0; }
 .section-title {
   text-align: center;
   margin: 1.5rem 0;
@@ -122,8 +129,8 @@ main {
 
 .cards {
   display: grid;
-  gap: 1rem;
-  margin-top: 1.5rem;
+  gap: 1.5rem;
+  margin-top: 0;
   grid-template-columns: repeat(3, 1fr);
 }
 
