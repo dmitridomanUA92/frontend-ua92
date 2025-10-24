@@ -48,11 +48,16 @@ nav ul {
     gap: 1rem;
 }
 
-nav a:link, nav a :visited {
+/* Fix visited link style and improve hover contrast */
+nav a:link,
+nav a:visited {
     color: var(--text-color);
+    text-decoration: none;
 }
-nav a:hover, nav a:focus {
-    color: var(--accent-yellow);
+
+nav a:hover,
+nav a:focus {
+    color: var(--accent-green);
     text-decoration: underline;
 }
 .skip-link {
