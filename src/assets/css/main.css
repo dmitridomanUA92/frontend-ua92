@@ -151,3 +151,24 @@ footer {
     grid-template-columns: 1fr;
   }
 }
+
+/* Footer quick-links layout */
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  border: 1px solid var(--border);
+  padding: 0.75rem;
+  margin-top: 1rem;
+}
+
+.footer-links a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.footer-links a:hover,
+.footer-links a:focus {
+  color: var(--accent-green);
+  text-decoration: underline;
+}
