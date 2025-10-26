@@ -3,61 +3,73 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>HTMLemon | About</title>
-  <link rel="stylesheet" href="./assets/css/main.css">
-  <link rel="icon" href="data:,">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/main.css">
+
+  <!-- Favicons -->
+  <link rel="icon" href="assets/img/favicon_io/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon_io/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon_io/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="assets/img/favicon_io/apple-touch-icon.png">
+  <link rel="manifest" href="assets/img/favicon_io/site.webmanifest">
+  <meta name="description" content="About HTMLemon - A tech blog that squeezes sour bugs into lemonade">
 </head>
 
 <body>
-<a class="skip-link" href="#main-content">Skip to main content</a>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
 
-<header>
-  <img src="./assets/img/htmllemon-logo.png" alt="HTMLemon logo" width="80" height="80">
-  <h1>HTMLemon</h1>
-  <p>Fault-finding made simple</p>
-  <button id="theme-toggle" type="button" aria-pressed="false">Theme</button>
+  <header>
+    <img src="assets/img/htmllemon-logo.png" alt="HTMLemon logo" width="80" height="80">
+    <a href="index.html" class="brand" aria-label="HTMLemon">
+      <picture>
+        <source srcset="assets/img/htmlemon-dark-logo.png" media="(prefers-color-scheme: dark)">
+        <img src="assets/img/htmlemon-logo.png" alt="HTMLemon logo" class="site-logo" width="80" height="80">
+      </picture>
+    </a>
+    <h1>HTMLemon</h1>
+    <p>Fault-finding made simple</p>
+    <button id="theme-toggle" type="button" aria-pressed="false">Theme</button>
 
-  <nav aria-label="Primary">
+    <nav aria-label="Primary">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" aria-current="page">About</a></li>
+        <li><a href="posts.html">Posts</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html" aria-current="page">About</a></li>
-      <li><a href="posts.html">Posts</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-</header>
+  <main id="main-content">
+    <section class="about">
+      <h2>About HTMLemon</h2>
+      <p>HTMLemon is a tiny tech blog that turns sour front‑end bugs into lemonade — short fixes, plain English, and a bit of fun.</p>
+      <p>It breaks down why pages fall apart — wonky HTML, missing CSS, scripts loading too late — and shows how to fix them in a few quick steps.</p>
+      <p>No jargon marathons. Just small examples, clear headings, and a focus on accessibility so anyone can follow along.</p>
 
-<main id="main-content">
-  <section class="about">
-    <h2>About HTMLemon</h2>
-    <p>HTMLemon is a tiny tech blog that turns sour front‑end bugs into lemonade — short fixes, plain English, and a bit of fun.</p>
-    <p>It breaks down why pages fall apart — wonky HTML, missing CSS, scripts loading too late — and shows how to fix them in a few quick steps.</p>
-    <p>No jargon marathons. Just small examples, clear headings, and a focus on accessibility so anyone can follow along.</p>
+      <h3>What you’ll find</h3>
+      <ul>
+        <li>Quick fixes you can try right now</li>
+        <li>“Why it broke” in one line</li>
+        <li>Tips that won’t wreck your layout</li>
+      </ul>
+    </section>
+  </main>
 
-    <h3>What you’ll find</h3>
-    <ul>
-      <li>Quick fixes you can try right now</li>
-      <li>“Why it broke” in one line</li>
-      <li>Tips that won’t wreck your layout</li>
-    </ul>
-  </section>
-</main>
+  <footer>
+    <nav aria-label="Footer">
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="posts.html">Posts</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <p>&copy; 2025 HTMLemon. All rights reserved.</p>
+  </footer>
 
-<footer>
-
-  <nav aria-label="Footer">
-    <ul class="footer-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="posts.html">Posts</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-
-  <p>&copy; 2025 HTMLemon. All rights reserved.</p>
-</footer>
-<script src="./assets/js/main.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
 </body>
 </html>
