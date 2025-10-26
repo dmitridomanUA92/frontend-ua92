@@ -1,53 +1,54 @@
 console.log("HTMLemon JS loaded");
 const root = document.documentElement;
-const prefersDark = window.matchMedia("(prefers-color-scheme: dark)");
-
-function setAriaPressed() {
-  var btn = document.getElementById("theme-toggle");
-  if (!btn) return;
-  btn.setAttribute("aria-pressed", String((root.getAttribute("data-theme") || "light") === "dark"));
-}
-
-function applyTheme(theme, persist) {
-  root.setAttribute("data-theme", theme);
-  console.log("Theme switched to:", theme);
-  if (persist) localStorage.setItem("theme", theme);
-  setAriaPressed();
-}
-
-(function init() {
-  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-    root.classList.add("reduced-motion");
-  }
+(function () {
   var stored = localStorage.getItem("theme");
-  if (stored === "dark" || stored === "light") {
-    applyTheme(stored, false);
-  } else {
-    applyTheme(prefersDark.matches ? "dark" : "light", false);
+  var mq = window.matchMedia("(prefers-color-scheme: dark)");
+  var initial = (stored === "dark" || stored === "light") ? stored : (mq.matches ? "dark" : "light");
+  root.setAttribute("data-theme", initial);
+})();
+(function () {
+  const toggle = document.getElementById('theme-toggle');
+  const logo = document.querySelector('.site-logo');
+
+  const systemPrefersDark = () =>
+    window.matchMedia &&
+    window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+  function currentTheme() {
+    return localStorage.getItem('theme') || (systemPrefersDark() ? 'dark' : 'light');
   }
 
-  var btn = document.getElementById("theme-toggle");
-  if (btn) {
-    btn.addEventListener("click", function () {
-      var current = root.getAttribute("data-theme") || "light";
-      var next = current === "dark" ? "light" : "dark";
-      applyTheme(next, true);
+  // Swap the logo source according to current theme
+  function swapLogo(theme) {
+    if (!logo) return;
+    const light = logo.getAttribute('data-light-src');
+    const dark = logo.getAttribute('data-dark-src');
+    logo.src = theme === 'dark' && dark ? dark : light;
+  }
+
+  function applyTheme(theme) {
+    const t = theme || currentTheme();
+    root.dataset.theme = t;
+    swapLogo(t);
+    if (toggle) toggle.setAttribute('aria-pressed', String(t === 'dark'));
+  }
+
+  // Init on load
+  applyTheme();
+
+  // Manual toggle
+  if (toggle) {
+    toggle.addEventListener('click', () => {
+      const next = root.dataset.theme === 'dark' ? 'light' : 'dark';
+      localStorage.setItem('theme', next);
+      applyTheme(next);
     });
   }
 
-  if (typeof prefersDark.addEventListener === "function") {
-    prefersDark.addEventListener("change", function (e) {
-      if (!localStorage.getItem("theme")) {
-        applyTheme(e.matches ? "dark" : "light", false);
-      }
-    });
-  } else if (typeof prefersDark.addListener === "function") {
-    prefersDark.addListener(function (e) {
-      if (!localStorage.getItem("theme")) {
-        applyTheme(e.matches ? "dark" : "light", false);
-      }
+  // Follow OS changes if user hasn't explicitly chosen
+  if (window.matchMedia) {
+    mq.addEventListener?.('change', () => {
+      if (!localStorage.getItem('theme')) applyTheme();
     });
   }
-
-  setAriaPressed();
 })();
