@@ -1,0 +1,21 @@
+<svg width="450" height="120" viewBox="0 0 450 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- HTMLEM text -->
+  <text x="20" y="65" font-family="Inter, system-ui, sans-serif" font-size="56" font-weight="400" fill="#FFFFFF" letter-spacing="-1">HTMLEM</text>
+  
+  <!-- Lemon Icon as the O -->
+  <g transform="translate(285, 26)">
+    <path d="M25 5C25 5 27.5 2.5 29 4C30.5 5.5 28 8 28 8C35 9 42.5 15 42.5 25C42.5 35 35 42.5 25 42.5C15 42.5 7.5 35 7.5 25C7.5 15 15 9 22 8C22 8 19.5 5.5 21 4C22.5 2.5 25 5 25 5Z" fill="#F8E71C" stroke="#E6D317" stroke-width="1"/>
+    <circle cx="25" cy="26" r="13" fill="rgba(255, 255, 255, 0.9)"/>
+    <g transform="translate(25, 26)">
+      <path d="M-5 -4L-9 0L-5 4" stroke="#1E1E1E" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      <path d="M5 -4L9 0L5 4" stroke="#1E1E1E" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      <path d="M2 -5L-2 5" stroke="#1E1E1E" stroke-width="1.25" stroke-linecap="round" fill="none"/>
+    </g>
+  </g>
+  
+  <!-- N text -->
+  <text x="335" y="65" font-family="Inter, system-ui, sans-serif" font-size="56" font-weight="400" fill="#FFFFFF" letter-spacing="-1">N</text>
+  
+  <!-- Tagline -->
+  <text x="225" y="95" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="400" fill="#FFFFFF" opacity="0.7" text-anchor="middle" letter-spacing="1">Fault-finding made simple</text>
+</svg>
