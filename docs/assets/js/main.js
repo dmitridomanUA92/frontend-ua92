@@ -19,15 +19,15 @@ function setAriaPressed() {
   btn.setAttribute("aria-pressed", String((root.getAttribute("data-theme") || "light") === "dark"));
 }
 
-
-function swapLogo(theme) {
-  var logo = document.getElementById('site-logo');
-  if (!logo) return;
-  var lightSrc = logo.getAttribute('data-light');
-  var darkSrc = logo.getAttribute('data-dark');
-  if (lightSrc && darkSrc) {
-    logo.src = theme === 'dark' ? darkSrc : lightSrc;
-  }
+function setToggleLabel() {
+  var btn = document.getElementById("theme-toggle");
+  if (!btn) return;
+  var theme = (root.getAttribute("data-theme") || "light");
+  var next = theme === "dark" ? "light" : "dark";
+  // Visible text label updates for sighted users
+  btn.textContent = next === "dark" ? "Dark Mode" : "Light Mode";
+  // Accessible label announces the action it will perform
+  btn.setAttribute("aria-label", next === "dark" ? "Enable dark mode" : "Enable light mode");
 }
 
 function applyTheme(theme, persist) {
@@ -36,6 +36,7 @@ function applyTheme(theme, persist) {
   console.log("Theme switched to:", theme);
   if (persist) localStorage.setItem("theme", theme);
   setAriaPressed();
+  setToggleLabel();
 }
 
 (function init() {
@@ -74,4 +75,5 @@ function applyTheme(theme, persist) {
 
   swapLogo(root.getAttribute('data-theme') || 'light');
   setAriaPressed();
+  setToggleLabel();
 })();
