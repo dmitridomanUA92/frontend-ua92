@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HTMLemon | About</title>
 
-  <!-- CSS -->
+  
   <link rel="stylesheet" href="assets/css/main.css">
 
-  <!-- Favicons -->
+  
   <link rel="icon" href="assets/img/favicon_io/favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon_io/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon_io/favicon-16x16.png">
@@ -21,12 +21,12 @@
   <a class="skip-link" href="#main-content">Skip to main content</a>
 
   <header>
-    <img src="assets/img/htmllemon-logo.png" alt="HTMLemon logo" width="80" height="80">
     <a href="index.html" class="brand" aria-label="HTMLemon">
-      <picture>
-        <source srcset="assets/img/htmlemon-dark-logo.png" media="(prefers-color-scheme: dark)">
-        <img src="assets/img/htmlemon-logo.png" alt="HTMLemon logo" class="site-logo" width="80" height="80">
-      </picture>
+      <img id="site-logo"
+           src="assets/img/htmlemon-logo.png"
+           data-light="assets/img/htmlemon-logo.png"
+           data-dark="assets/img/htmlemon-dark-logo.png"
+           alt="HTMLemon logo" width="80" height="80">
     </a>
     <h1>HTMLemon</h1>
     <p>Fault-finding made simple</p>
