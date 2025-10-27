@@ -82,6 +82,8 @@ header, nav, main, footer {
 #site-logo {
   width: min(100%, 464px);
   height: auto;
+  height: 120px;
+  width: auto;
 }
 
 header, footer {
