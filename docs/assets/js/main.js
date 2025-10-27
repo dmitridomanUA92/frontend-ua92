@@ -1,4 +1,5 @@
 console.log("HTMLemon JS loaded");
+// parking a reference so I don't keep querying the root element
 const root = document.documentElement;
 
 const prefersDark = window.matchMedia("(prefers-color-scheme: dark)");
@@ -31,6 +32,7 @@ function setToggleLabel() {
 }
 
 function applyTheme(theme, persist) {
+  // swapping theme tokens first so everything else can react
   root.setAttribute("data-theme", theme);
   swapLogo(theme);
   console.log("Theme switched to:", theme);
@@ -40,6 +42,7 @@ function applyTheme(theme, persist) {
 }
 
 (function init() {
+  // initialise once, then every listener reefs back into applyTheme
   if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
     root.classList.add("reduced-motion");
   }

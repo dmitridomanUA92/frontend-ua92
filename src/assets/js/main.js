@@ -1,4 +1,5 @@
 console.log("HTMLemon JS loaded");
+// grab the root once so future theme updates stay cheap
 const root = document.documentElement;
 (function () {
   var stored = localStorage.getItem("theme");
@@ -18,7 +19,7 @@ const root = document.documentElement;
     return localStorage.getItem('theme') || (systemPrefersDark() ? 'dark' : 'light');
   }
 
-  // Swap the logo source according to current theme
+  // swap the logo source according to current theme
   function swapLogo(theme) {
     if (!logo) return;
     const light = logo.getAttribute('data-light-src');
@@ -33,7 +34,7 @@ const root = document.documentElement;
     if (toggle) toggle.setAttribute('aria-pressed', String(t === 'dark'));
   }
 
-  // Init on load
+  // init on load
   applyTheme();
 
   // Manual toggle
@@ -45,7 +46,7 @@ const root = document.documentElement;
     });
   }
 
-  // Follow OS changes if user hasn't explicitly chosen
+  // follow OS changes if the visitor hasn't explicitly chosen
   if (window.matchMedia) {
     mq.addEventListener?.('change', () => {
       if (!localStorage.getItem('theme')) applyTheme();

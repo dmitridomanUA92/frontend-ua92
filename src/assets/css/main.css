@@ -19,6 +19,8 @@
   --accent-green: #a6e22e;
   --accent-yellow: #f8e71c;
 }
+
+/* note to self: keep the theme tokens grouped so swapping palettes stays easy */
 html, body {
     font-family: var(--font-main);
     background-color: var(--bg);
@@ -54,6 +56,7 @@ ul {
   gap: 1rem;
 }
 
+/* this cluster keeps the brand and toggle from trampling the nav on small widths */
 .header-top {
   display: flex;
   align-items: center;
@@ -73,10 +76,10 @@ ul {
 }
 
 #site-logo {
-  width: min(100%, 464px);
+  display: block;
+  max-width: 464px;
+  width: 100%;
   height: auto;
-  height: 120px;
-  width: auto;
 }
 
 header, nav, main, footer {
@@ -187,6 +190,7 @@ main {
   padding: 1rem;
 }
 
+/* default to three cards; media queries collapse it later */
 .cards {
   display: grid;
   gap: 1.5rem;
