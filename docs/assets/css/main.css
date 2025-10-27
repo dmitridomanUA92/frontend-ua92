@@ -80,8 +80,8 @@ header, nav, main, footer {
 .brand img { display: block; }
 
 #site-logo {
-  height: 120px;
-  width: auto;
+  width: min(100%, 464px);
+  height: auto;
 }
 
 header, footer {

@@ -73,8 +73,8 @@ ul {
 }
 
 #site-logo {
-  height: 120px;
-  width: auto;
+  width: min(100%, 464px);
+  height: auto;
 }
 
 header, nav, main, footer {
