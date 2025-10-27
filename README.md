@@ -1,31 +1,20 @@
 # HTMLemon
-A front-end project by D'mitri Doman for UA92 L4 Front-End Development
 
-## Overview
-HTMLemon is a tech blog looking at common faults and defects(Lemons) across all technology domains and how to prevent them aswell as raise this with the manufacturer. Additionally it will translate technological issues to the wider public using a variety of accessibility tools aswell as replacing tech-jargon into laymans terms.My aim is to increase the number of users able to access and more importantly action a solution to their technical issues.
+A front-end website project developed for the UA92 Web Development module.
 
 ## Features
-- Responsive Layout
-- Accessibility (Focus states, skip link)
-- Semantic HTML Structure
-  
-  ## Structure
+- Responsive design
+- Light/Dark mode toggle
+- Accessible structure (semantic HTML, alt text, focus outlines)
+- Consistent branding based on the HTMLemon style guide
 
-  src/ (assets)
-  docs/ (reports + Planning)
-  evidence/ (screenshots)
-  tests/ (Validation)
+## Structure
+- /source – HTML, CSS, JS files  
+- /docs – Research, design, and testing notes  
+- /evidence – Screenshots and test results  
 
-  ## Accessibility Goals 
-  - WCAG AA Contrast
-  - Semantic landmarks
-  - Visible focus outlines
-  
-  ## Running 
-  Open 'src/pages/index.html' in a browser.
+## Deployment
+Live site: https://dmitridomanua92.github.io/frontend-ua92/
 
-  ## Academic Integrity 
-  All code and documentation authored by D'mitri Doman.
-
-  ## License 
-  MIT
+## Author
+D’mitri Doman – University Academy 92 (UA92)
