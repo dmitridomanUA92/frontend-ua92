@@ -1,6 +1,17 @@
 console.log("HTMLemon JS loaded");
 const root = document.documentElement;
+
 const prefersDark = window.matchMedia("(prefers-color-scheme: dark)");
+
+function swapLogo(theme) {
+  var logo = document.getElementById('site-logo');
+  if (!logo) return;
+  var lightSrc = logo.getAttribute('data-light');
+  var darkSrc = logo.getAttribute('data-dark');
+  if (lightSrc && darkSrc) {
+    logo.src = theme === 'dark' ? darkSrc : lightSrc;
+  }
+}
 
 function setAriaPressed() {
   var btn = document.getElementById("theme-toggle");
@@ -10,6 +21,7 @@ function setAriaPressed() {
 
 function applyTheme(theme, persist) {
   root.setAttribute("data-theme", theme);
+  swapLogo(theme);
   console.log("Theme switched to:", theme);
   if (persist) localStorage.setItem("theme", theme);
   setAriaPressed();
@@ -49,5 +61,6 @@ function applyTheme(theme, persist) {
     });
   }
 
+  swapLogo(root.getAttribute('data-theme') || 'light');
   setAriaPressed();
 })();
