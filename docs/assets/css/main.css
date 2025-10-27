@@ -73,12 +73,14 @@ ul {
 .brand img {
   display: block;
 }
+.brand img { display: block; }
+img { max-width: 100%; height: auto; }
 
 #site-logo {
-  width: min(100%, 464px);
+  display: block;
+  max-width: 464px;
+  width: 100%;
   height: auto;
-  height: 120px;
-  width: auto;
 }
 
 header, nav, main, footer {
