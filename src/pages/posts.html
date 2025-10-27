@@ -21,18 +21,18 @@
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
 
-  <header>
-    <img src="assets/img/htmllemon-logo.png" alt="HTMLemon logo" width="80" height="80">
-    <a href="index.html" class="brand" aria-label="HTMLemon">
-      <picture>
-        <source srcset="assets/img/htmlemon-dark-logo.png" media="(prefers-color-scheme: dark)">
-        <img src="assets/img/htmlemon-logo.png" alt="HTMLemon logo" class="site-logo" width="80" height="80">
-      </picture>
-    </a>
-    <h1>HTMLemon</h1>
-    <p>Fault-finding made simple</p>
-    <button id="theme-toggle" type="button" aria-pressed="false">Theme</button>
-
+  <header class="site-header">
+    <div class="header-top">
+      <a href="index.html" class="brand" aria-label="HTMLemon">
+        <img
+          id="site-logo"
+          src="assets/img/htmlemon-logo.png"
+          data-light="assets/img/htmlemon-logo.png"
+          data-dark="assets/img/htmlemon-dark-logo.png"
+          alt="HTMLemon logo">
+      </a>
+      <button id="theme-toggle" type="button" aria-pressed="false">Theme</button>
+    </div>
     <nav aria-label="Primary">
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
